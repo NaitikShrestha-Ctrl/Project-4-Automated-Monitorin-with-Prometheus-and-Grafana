@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s  #Every 15 seconds, go collect metrics
+
+scrape_configs:
+  - job_name: 'app'  #Give this monitoring job a name called "app"
+    static_configs:
+      - targets: ['app:8001']  #Collect metrics from your Python app on port 8001
